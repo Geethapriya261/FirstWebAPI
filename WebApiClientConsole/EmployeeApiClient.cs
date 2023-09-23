@@ -90,8 +90,8 @@ namespace WebApiClientConsole
                     .Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 EmpViewModel employee = new EmpViewModel()
                 {
-                    FirstName = "John",
-                    LastName = "Wick",
+                    FirstName = "J",
+                    LastName = "D",
                     City = "Nyc",
                     BirthDate = new DateTime(1980, 01, 01),
                     HireDate = new DateTime(2000, 01, 01),
@@ -102,7 +102,7 @@ namespace WebApiClientConsole
                 var byteContent = new ByteArrayContent(buffer);
                 byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 //HttpPut
-                HttpResponseMessage response = await client.PutAsync($"ModifyEmployees?{id}", byteContent);
+                HttpResponseMessage response = await client.PutAsync($"ModifyEmployee?{id}", byteContent);
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
@@ -126,7 +126,7 @@ namespace WebApiClientConsole
 
 
 
-                //HttpPost:
+                //HttpDelete:
                 HttpResponseMessage response = await client.DeleteAsync($"DeleteEmployee?{id}");
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)

@@ -135,7 +135,7 @@ namespace FirstWebAPI.Controllers
 
 
 
-        [HttpDelete]
+        [HttpDelete("/DeleteEmployee")]
 
         public int DeleteEmployee(int id)
 

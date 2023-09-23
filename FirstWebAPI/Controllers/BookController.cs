@@ -13,7 +13,6 @@ namespace FirstWebAPI.Controllers
         public List<Book> GetBooks()
             
         {
-            List<Book> bookList = new List<Book>();
             for(int i=0;i<8;i++)
             {
                 Book book = new Book();
